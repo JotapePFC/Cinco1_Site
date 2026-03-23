@@ -27,9 +27,15 @@
                 <a href="index.html" class="font-logo text-xl tracking-wider hover:opacity-80 transition-opacity">
                     CINCO1
                 </a>
-                <a href="plans.html" class="text-xs tracking-[0.22em] text-gray-300 hover:text-white uppercase transition-colors">
-                    Subscribe
-                </a>
+                <div class="flex items-center gap-4">
+                    <!-- Language Toggle -->
+                    <button class="lang-toggle-btn text-white/90 hover:text-white transition-colors text-xs font-semibold tracking-[0.1em] px-3 py-1.5 border border-white/20 rounded-full flex items-center justify-center min-w-[70px]">
+                        <span class="lang-toggle-text">PT-BR</span>
+                    </button>
+                    <a href="plans.html" class="text-xs tracking-[0.22em] text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_subscribe">
+                        Subscribe
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -38,14 +44,14 @@
     <main class="flex-1 flex items-center justify-center px-4 pt-24 pb-10">
         <div class="w-full max-w-md">
             <div class="border border-white/10 bg-white/5 backdrop-blur-sm rounded-2xl px-8 py-10">
-                <h1 class="font-logo text-2xl mb-2 text-center">Sign in</h1>
-                <p class="text-sm text-gray-300 text-center mb-8">
+                <h1 class="font-logo text-2xl mb-2 text-center" data-i18n="login_title">Sign in</h1>
+                <p class="text-sm text-gray-300 text-center mb-8" data-i18n="login_desc">
                     Access your Cinco1 account to manage your subscription.
                 </p>
 
                 <form id="login-form" class="space-y-5">
                     <div class="space-y-2">
-                        <label for="email" class="block text-xs uppercase tracking-[0.22em] text-gray-400">
+                        <label for="email" class="block text-xs uppercase tracking-[0.22em] text-gray-400" data-i18n="login_email">
                             E-mail
                         </label>
                         <input
@@ -54,11 +60,12 @@
                             required
                             class="w-full rounded-full bg-black border border-white/20 px-4 py-3 text-sm outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
                             placeholder="you@example.com"
+                            data-i18n-placeholder="login_email_placeholder"
                         />
                     </div>
 
                     <div class="space-y-2">
-                        <label for="password" class="block text-xs uppercase tracking-[0.22em] text-gray-400">
+                        <label for="password" class="block text-xs uppercase tracking-[0.22em] text-gray-400" data-i18n="login_password">
                             Password
                         </label>
                         <input
@@ -67,15 +74,16 @@
                             required
                             class="w-full rounded-full bg-black border border-white/20 px-4 py-3 text-sm outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
                             placeholder="••••••••"
+                            data-i18n-placeholder="login_password_placeholder"
                         />
                     </div>
 
                     <div class="flex items-center justify-between text-xs text-gray-400">
                         <label class="inline-flex items-center gap-2 cursor-pointer">
                             <input type="checkbox" class="rounded border-white/30 bg-black text-white focus:ring-white/60" />
-                            <span>Remember me</span>
+                            <span data-i18n="login_remember">Remember me</span>
                         </label>
-                        <a href="#" class="hover:text-white transition-colors">
+                        <a href="#" class="hover:text-white transition-colors" data-i18n="login_forgot">
                             Forgot password?
                         </a>
                     </div>
@@ -83,14 +91,15 @@
                     <button
                         type="submit"
                         class="w-full inline-flex justify-center items-center bg-white text-black px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/90 transition-colors mt-4"
+                        data-i18n="login_btn_enter"
                     >
                         Login
                     </button>
                 </form>
 
                 <p class="mt-6 text-center text-xs text-gray-400">
-                    New here?
-                    <a href="plans.html" class="text-white hover:underline">
+                    <span data-i18n="login_new_here">New here?</span>
+                    <a href="plans.html" class="text-white hover:underline" data-i18n="login_subscribe_link">
                         Subscribe to Cinco1
                     </a>
                 </p>
@@ -126,6 +135,8 @@
             }
         });
     </script>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
 

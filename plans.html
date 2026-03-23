@@ -27,9 +27,15 @@
                 <a href="index.html" class="font-logo text-xl tracking-wider hover:opacity-80 transition-opacity">
                     CINCO1
                 </a>
-                <a href="index.html" class="text-xs tracking-[0.22em] text-gray-300 hover:text-white uppercase transition-colors">
-                    Back to home
-                </a>
+                <div class="flex items-center gap-4">
+                    <!-- Language Toggle -->
+                    <button class="lang-toggle-btn text-white/90 hover:text-white transition-colors text-xs font-semibold tracking-[0.1em] px-3 py-1.5 border border-white/20 rounded-full flex items-center justify-center min-w-[70px]">
+                        <span class="lang-toggle-text">PT-BR</span>
+                    </button>
+                    <a href="index.html" class="text-xs tracking-[0.22em] text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_back_home">
+                        Back to home
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -38,10 +44,10 @@
     <main class="pt-28 pb-20">
         <section class="max-w-6xl mx-auto px-6 lg:px-8">
             <div class="max-w-xl mb-12">
-                <h1 class="font-logo text-3xl md:text-4xl mb-4">
+                <h1 class="font-logo text-3xl md:text-4xl mb-4" data-i18n="plans_title">
                     Choose your plan
                 </h1>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+                <p class="text-sm md:text-base text-gray-300 leading-relaxed" data-i18n="plans_desc">
                     Access exclusive interviews, photos and exposure pieces from the skateboarding scene of Porto Alegre and beyond.
                 </p>
             </div>
@@ -50,80 +56,80 @@
                 <!-- Plano Mensal -->
                 <article class="border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm p-8 flex flex-col gap-5">
                     <div>
-                        <h2 class="font-logo text-xl mb-1">Monthly</h2>
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400">
+                        <h2 class="font-logo text-xl mb-1" data-i18n="plans_monthly">Monthly</h2>
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400" data-i18n="plans_monthly_desc">
                             Flexible subscription
                         </p>
                     </div>
 
                     <div>
-                        <p class="text-sm text-gray-300 mb-1">
+                        <p class="text-sm text-gray-300 mb-1" data-i18n="plans_billed_month">
                             Billed every month
                         </p>
                         <p class="text-3xl font-semibold">
-                            R$ 9,90<span class="text-sm text-gray-400 ml-1">/mês</span>
+                            R$ 9,90<span class="text-sm text-gray-400 ml-1" data-i18n="plans_month_suffix">/mês</span>
                         </p>
                     </div>
 
                     <ul class="text-sm text-gray-300 space-y-1.5">
-                        <li>• Full digital access to Cinco1</li>
-                        <li>• New Interviews &amp; Exposure articles</li>
-                        <li>• Cancel anytime</li>
+                        <li data-i18n="plans_feature_1">• Full digital access to Cinco1</li>
+                        <li data-i18n="plans_feature_2">• New Interviews &amp; Exposure articles</li>
+                        <li data-i18n="plans_feature_3">• Cancel anytime</li>
                     </ul>
 
                     <div class="mt-4 space-y-3">
-                        <button id="btn-monthly-card" class="w-full inline-flex justify-center items-center bg-white text-black px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/90 transition-colors">
+                        <button id="btn-monthly-card" class="w-full inline-flex justify-center items-center bg-white text-black px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/90 transition-colors" data-i18n="plans_btn_card">
                             Pay with card
                         </button>
-                        <button id="btn-monthly-pix" class="w-full inline-flex justify-center items-center border border-white/60 text-white px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white hover:text-black transition-colors">
+                        <button id="btn-monthly-pix" class="w-full inline-flex justify-center items-center border border-white/60 text-white px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white hover:text-black transition-colors" data-i18n="plans_btn_pix">
                             Pay with PIX -5%
                         </button>
                         <p class="text-[11px] text-gray-400">
-                            PIX price: <span class="font-semibold text-gray-200">R$ 9,41</span> (5% off).
+                            <span data-i18n="plans_pix_price">PIX price: </span><span class="font-semibold text-gray-200">R$ 9,41</span><span data-i18n="plans_discount"> (5% off).</span>
                         </p>
                     </div>
                 </article>
 
                 <!-- Plano Anual -->
                 <article class="border border-white rounded-2xl bg-white/10 backdrop-blur-sm p-8 flex flex-col gap-5 relative overflow-hidden">
-                    <span class="absolute top-4 right-5 text-[10px] tracking-[0.22em] uppercase bg-white text-black px-3 py-1 rounded-full">
+                    <span class="absolute top-4 right-5 text-[10px] tracking-[0.22em] uppercase bg-white text-black px-3 py-1 rounded-full" data-i18n="plans_best_value">
                         Best value
                     </span>
 
                     <div>
-                        <h2 class="font-logo text-xl mb-1">Annual</h2>
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-300">
+                        <h2 class="font-logo text-xl mb-1" data-i18n="plans_annual">Annual</h2>
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-300" data-i18n="plans_annual_desc">
                             Save with 12 months
                         </p>
                     </div>
 
                     <div>
-                        <p class="text-sm text-gray-300 line-through">
+                        <p class="text-sm text-gray-300 line-through" data-i18n="plans_strikethrough">
                             R$ 119,88 / ano
                         </p>
-                        <p class="text-sm text-gray-300 mb-1">
+                        <p class="text-sm text-gray-300 mb-1" data-i18n="plans_now">
                             Now
                         </p>
                         <p class="text-3xl font-semibold">
-                            R$ 99,90<span class="text-sm text-gray-400 ml-1">/ano</span>
+                            R$ 99,90<span class="text-sm text-gray-400 ml-1" data-i18n="plans_year_suffix">/ano</span>
                         </p>
                     </div>
 
                     <ul class="text-sm text-gray-300 space-y-1.5">
-                        <li>• Everything from the Monthly plan</li>
-                        <li>• Priority access to new projects</li>
-                        <li>• Save compared to paying monthly</li>
+                        <li data-i18n="plans_feature_1a">• Everything from the Monthly plan</li>
+                        <li data-i18n="plans_feature_2a">• Priority access to new projects</li>
+                        <li data-i18n="plans_feature_3a">• Save compared to paying monthly</li>
                     </ul>
 
                     <div class="mt-4 space-y-3">
-                        <button id="btn-annual-card" class="w-full inline-flex justify-center items-center bg-white text-black px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/90 transition-colors">
+                        <button id="btn-annual-card" class="w-full inline-flex justify-center items-center bg-white text-black px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/90 transition-colors" data-i18n="plans_btn_card">
                             Pay with card
                         </button>
-                        <button id="btn-annual-pix" class="w-full inline-flex justify-center items-center border border-white/60 text-white px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white hover:text-black transition-colors">
+                        <button id="btn-annual-pix" class="w-full inline-flex justify-center items-center border border-white/60 text-white px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white hover:text-black transition-colors" data-i18n="plans_btn_pix">
                             Pay with PIX -5%
                         </button>
                         <p class="text-[11px] text-gray-400">
-                            PIX price: <span class="font-semibold text-gray-200">R$ 94,91</span> (5% off).
+                            <span data-i18n="plans_pix_price_ann">PIX price: </span><span class="font-semibold text-gray-200">R$ 94,91</span><span data-i18n="plans_discount"> (5% off).</span>
                         </p>
                     </div>
                 </article>
@@ -191,6 +197,8 @@
             startCheckout('annual_pix', 'pix'); // aplicar 5% de desconto no backend
         });
     </script>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
 

@@ -148,16 +148,21 @@
 
                 <!-- Desktop Menu (centered) -->
                 <ul class="hidden md:flex flex-1 justify-center gap-8">
-                    <li><a href="index.html" class="text-gray-400 hover:text-gray-200 transition-colors text-xs tracking-[0.22em]">HOME</a></li>
-                    <li><a href="#about" class="text-gray-400 hover:text-gray-200 transition-colors text-xs tracking-[0.22em]">ABOUT US</a></li>
-                    <li><a href="interviews.html" class="text-gray-400 hover:text-gray-200 transition-colors text-xs tracking-[0.22em]">INTERVIEWS</a></li>
-                    <li><a href="exposure.html" class="text-gray-400 hover:text-gray-200 transition-colors text-xs tracking-[0.22em]">EXPOSURE</a></li>
+                    <li><a href="index.html" class="text-gray-400 hover:text-gray-200 transition-colors text-xs tracking-[0.22em]" data-i18n="nav_home">HOME</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-gray-200 transition-colors text-xs tracking-[0.22em]" data-i18n="nav_about">ABOUT US</a></li>
+                    <li><a href="interviews.html" class="text-gray-400 hover:text-gray-200 transition-colors text-xs tracking-[0.22em]" data-i18n="nav_interviews">INTERVIEWS</a></li>
+                    <li><a href="exposure.html" class="text-gray-400 hover:text-gray-200 transition-colors text-xs tracking-[0.22em]" data-i18n="nav_exposure">EXPOSURE</a></li>
                 </ul>
 
                 <!-- Right side -->
                 <div class="ml-auto flex items-center gap-4">
+                    <!-- Language Toggle -->
+                    <button class="lang-toggle-btn text-white/90 hover:text-white transition-colors text-xs font-semibold tracking-[0.1em] px-3 py-1.5 border border-white/20 rounded-full flex items-center justify-center min-w-[70px]">
+                        <span class="lang-toggle-text">PT-BR</span>
+                    </button>
+
                     <!-- Login Button (desktop) -->
-                    <a href="login.html" class="hidden md:inline-flex items-center px-6 py-2 rounded-full bg-white/10 text-white/80 text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/15 hover:text-white transition-colors">
+                    <a href="login.html" class="hidden md:inline-flex items-center px-6 py-2 rounded-full bg-white/10 text-white/80 text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/15 hover:text-white transition-colors" data-i18n="nav_login">
                         Login
                     </a>
 
@@ -180,13 +185,13 @@
                     </svg>
                 </button>
                 <ul class="space-y-4">
-                    <li><a href="index.html" class="block text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] py-3">HOME</a></li>
-                    <li><a href="#about" class="block text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] py-3">ABOUT US</a></li>
-                    <li><a href="interviews.html" class="block text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] py-3">INTERVIEWS</a></li>
-                    <li><a href="exposure.html" class="block text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] py-3">EXPOSURE</a></li>
+                    <li><a href="index.html" class="block text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] py-3" data-i18n="nav_home">HOME</a></li>
+                    <li><a href="#about" class="block text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] py-3" data-i18n="nav_about">ABOUT US</a></li>
+                    <li><a href="interviews.html" class="block text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] py-3" data-i18n="nav_interviews">INTERVIEWS</a></li>
+                    <li><a href="exposure.html" class="block text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] py-3" data-i18n="nav_exposure">EXPOSURE</a></li>
                 </ul>
                 <div class="mt-8">
-                    <button class="w-full inline-flex justify-center items-center px-6 py-3 rounded-full bg-white/10 text-white/80 text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/15 hover:text-white transition-colors">
+                    <button class="w-full inline-flex justify-center items-center px-6 py-3 rounded-full bg-white/10 text-white/80 text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/15 hover:text-white transition-colors" data-i18n="nav_login">
                         Login
                     </button>
                 </div>
@@ -204,13 +209,13 @@
         <div class="absolute inset-0 flex items-center">
             <div class="max-w-5xl mx-auto px-6 lg:px-12">
                 <div class="max-w-xl fade-in-up">
-                    <h2 class="text-5xl md:text-6xl font-extrabold tracking-wide text-white mb-6 font-logo">
+                    <h2 class="text-5xl md:text-6xl font-extrabold tracking-wide text-white mb-6 font-logo" data-i18n="home_hero_title">
                         CINCO1
                     </h2>
-                    <p class="text-2xl md:text-3xl text-gray-300 mb-10 leading-snug">
+                    <p class="text-2xl md:text-3xl text-gray-300 mb-10 leading-snug" data-i18n="home_hero_subtitle">
                         Skateboarding scene<br>from Porto Alegre, Brazil.
                     </p>
-                    <a href="plans.html" class="inline-flex items-center bg-white text-skate-black px-8 py-3 rounded-full font-semibold text-sm tracking-wide uppercase hover:bg-white/90 transition-colors shadow-lg">
+                    <a href="plans.html" class="inline-flex items-center bg-white text-skate-black px-8 py-3 rounded-full font-semibold text-sm tracking-wide uppercase hover:bg-white/90 transition-colors shadow-lg" data-i18n="home_subscribe_btn">
                         Subscribe
                     </a>
                 </div>
@@ -223,7 +228,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="text-center">
                 <h3 class="text-2xl font-bold mb-4 text-white font-logo">Cinco1</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">Skateboarding scene from Porto Alegre to the world</p>
+                <p class="text-gray-600 dark:text-gray-300 mb-6" data-i18n="footer_desc">Skateboarding scene from Porto Alegre to the world</p>
                 
                 <!-- Social Links -->
                 <div class="flex justify-center mb-8">
@@ -235,8 +240,8 @@
                 </div>
                 
                 <div class="border-t border-light-border dark:border-skate-dark pt-8">
-                    <p class="text-gray-500 dark:text-gray-400 text-sm">&copy; 2025 Cinco1 Skate Magazine. Todos os direitos reservados.</p>
-                    <p class="text-light-gray dark:text-skate-gray text-xs mt-2">Made with ♥ em Porto Alegre, Brasil</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm" data-i18n="footer_rights">&copy; 2025 Cinco1 Skate Magazine. Todos os direitos reservados.</p>
+                    <p class="text-light-gray dark:text-skate-gray text-xs mt-2" data-i18n="footer_made">Made with ♥ em Porto Alegre, Brasil</p>
                 </div>
             </div>
         </div>
@@ -420,5 +425,7 @@
             }
         });
     </script>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>

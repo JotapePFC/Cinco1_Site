@@ -31,11 +31,17 @@
                 <a href="index.html" class="font-logo text-xl tracking-wider hover:opacity-80 transition-opacity">
                     CINCO1
                 </a>
-                <nav class="hidden md:flex items-center gap-6 text-xs tracking-[0.22em]">
-                    <a href="index.html" class="text-gray-300 hover:text-white uppercase transition-colors">Home</a>
-                    <a href="interviews.html" class="text-gray-300 hover:text-white uppercase transition-colors">Interviews</a>
-                    <a href="plans.html" class="text-gray-300 hover:text-white uppercase transition-colors">Plans</a>
-                </nav>
+                <div class="flex items-center gap-4">
+                    <!-- Language Toggle -->
+                    <button class="lang-toggle-btn text-white/90 hover:text-white transition-colors text-xs font-semibold tracking-[0.1em] px-3 py-1.5 border border-white/20 rounded-full flex items-center justify-center min-w-[70px]">
+                        <span class="lang-toggle-text">PT-BR</span>
+                    </button>
+                    <nav class="hidden md:flex items-center gap-6 text-xs tracking-[0.22em]">
+                        <a href="index.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_home">Home</a>
+                        <a href="interviews.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_interviews">Interviews</a>
+                        <a href="plans.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_plans">Plans</a>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -43,13 +49,13 @@
     <main class="pt-28 pb-20">
         <section class="max-w-6xl mx-auto px-6 lg:px-8">
             <header class="mb-10">
-                <p class="text-xs tracking-[0.22em] text-gray-400 uppercase mb-2">
+                <p class="text-xs tracking-[0.22em] text-gray-400 uppercase mb-2" data-i18n="exp_pretitle">
                     Upcoming releases
                 </p>
-                <h1 class="font-logo text-3xl md:text-4xl mb-3">
+                <h1 class="font-logo text-3xl md:text-4xl mb-3" data-i18n="exp_title">
                     Exposure
                 </h1>
-                <p class="text-sm md:text-base text-gray-300 max-w-2xl">
+                <p class="text-sm md:text-base text-gray-300 max-w-2xl" data-i18n="exp_desc">
                     A preview of upcoming issues. Covers and descriptions are placeholders while the real material is in production.
                 </p>
             </header>
@@ -60,8 +66,8 @@
                     <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=31')] bg-cover bg-center"></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between gap-4 mb-3">
-                            <h2 class="font-logo text-lg">Issue 1</h2>
-                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                            <h2 class="font-logo text-lg" data-i18n="exp_issue1">Issue 1</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full" data-i18n="exp_coming">
                                 Coming soon
                             </span>
                         </div>
@@ -70,7 +76,7 @@
                         </p>
 
                         <div class="mt-5">
-                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-1">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-1" data-i18n="exp_view_gallery">
                                 View gallery (15)
                             </button>
                             <div id="gallery-issue-1" class="hidden mt-4">
@@ -101,8 +107,8 @@
                     <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=32')] bg-cover bg-center"></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between gap-4 mb-3">
-                            <h2 class="font-logo text-lg">Issue 2</h2>
-                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                            <h2 class="font-logo text-lg" data-i18n="exp_issue2">Issue 2</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full" data-i18n="exp_coming">
                                 Coming soon
                             </span>
                         </div>
@@ -111,7 +117,7 @@
                         </p>
 
                         <div class="mt-5">
-                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-2">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-2" data-i18n="exp_view_gallery">
                                 View gallery (15)
                             </button>
                             <div id="gallery-issue-2" class="hidden mt-4">
@@ -142,8 +148,8 @@
                     <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=33')] bg-cover bg-center"></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between gap-4 mb-3">
-                            <h2 class="font-logo text-lg">Issue 3</h2>
-                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                            <h2 class="font-logo text-lg" data-i18n="exp_issue3">Issue 3</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full" data-i18n="exp_coming">
                                 Coming soon
                             </span>
                         </div>
@@ -152,7 +158,7 @@
                         </p>
 
                         <div class="mt-5">
-                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-3">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-3" data-i18n="exp_view_gallery">
                                 View gallery (15)
                             </button>
                             <div id="gallery-issue-3" class="hidden mt-4">
@@ -183,8 +189,8 @@
                     <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=34')] bg-cover bg-center"></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between gap-4 mb-3">
-                            <h2 class="font-logo text-lg">Issue 4</h2>
-                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                            <h2 class="font-logo text-lg" data-i18n="exp_issue4">Issue 4</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full" data-i18n="exp_coming">
                                 Coming soon
                             </span>
                         </div>
@@ -193,7 +199,7 @@
                         </p>
 
                         <div class="mt-5">
-                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-4">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-4" data-i18n="exp_view_gallery">
                                 View gallery (15)
                             </button>
                             <div id="gallery-issue-4" class="hidden mt-4">
@@ -224,8 +230,8 @@
                     <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=35')] bg-cover bg-center"></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between gap-4 mb-3">
-                            <h2 class="font-logo text-lg">Issue 5</h2>
-                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                            <h2 class="font-logo text-lg" data-i18n="exp_issue5">Issue 5</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full" data-i18n="exp_coming">
                                 Coming soon
                             </span>
                         </div>
@@ -234,7 +240,7 @@
                         </p>
 
                         <div class="mt-5">
-                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-5">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-5" data-i18n="exp_view_gallery">
                                 View gallery (15)
                             </button>
                             <div id="gallery-issue-5" class="hidden mt-4">
@@ -265,8 +271,8 @@
                     <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=36')] bg-cover bg-center"></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between gap-4 mb-3">
-                            <h2 class="font-logo text-lg">Issue 6</h2>
-                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                            <h2 class="font-logo text-lg" data-i18n="exp_issue6">Issue 6</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full" data-i18n="exp_coming">
                                 Coming soon
                             </span>
                         </div>
@@ -275,7 +281,7 @@
                         </p>
 
                         <div class="mt-5">
-                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-6">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-6" data-i18n="exp_view_gallery">
                                 View gallery (15)
                             </button>
                             <div id="gallery-issue-6" class="hidden mt-4">
@@ -310,7 +316,7 @@
             <div class="w-full max-w-4xl">
                 <div class="flex items-center justify-between mb-3">
                     <p id="gallery-modal-title" class="text-xs tracking-[0.22em] uppercase text-gray-300"></p>
-                    <button id="gallery-modal-close" class="text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] uppercase">
+                    <button id="gallery-modal-close" class="text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] uppercase" data-i18n="modal_close">
                         Close
                     </button>
                 </div>
@@ -318,10 +324,10 @@
                 <div class="relative">
                     <img id="gallery-modal-img" src="" alt="" class="w-full max-h-[75vh] object-contain rounded-xl border border-white/10 bg-black" />
 
-                    <button id="gallery-modal-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/15 border border-white/10 rounded-full px-4 py-2 text-xs tracking-[0.22em] uppercase">
+                    <button id="gallery-modal-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/15 border border-white/10 rounded-full px-4 py-2 text-xs tracking-[0.22em] uppercase" data-i18n="modal_prev">
                         Prev
                     </button>
-                    <button id="gallery-modal-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/15 border border-white/10 rounded-full px-4 py-2 text-xs tracking-[0.22em] uppercase">
+                    <button id="gallery-modal-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/15 border border-white/10 rounded-full px-4 py-2 text-xs tracking-[0.22em] uppercase" data-i18n="modal_next">
                         Next
                     </button>
                 </div>
@@ -416,6 +422,8 @@
             if (e.key === 'ArrowRight') step(1);
         });
     </script>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
 

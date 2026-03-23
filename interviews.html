@@ -27,13 +27,19 @@
                 <a href="index.html" class="font-logo text-xl tracking-wider hover:opacity-80 transition-opacity">
                     CINCO1
                 </a>
-                <nav class="hidden md:flex items-center gap-6 text-xs tracking-[0.22em]">
-                    <a href="index.html" class="text-gray-300 hover:text-white uppercase transition-colors">Home</a>
-                    <a href="plans.html" class="text-gray-300 hover:text-white uppercase transition-colors">Plans</a>
-                    <button id="btn-logout" class="text-gray-400 hover:text-white uppercase transition-colors">
-                        Logout
+                <div class="flex items-center gap-4">
+                    <!-- Language Toggle -->
+                    <button class="lang-toggle-btn text-white/90 hover:text-white transition-colors text-xs font-semibold tracking-[0.1em] px-3 py-1.5 border border-white/20 rounded-full flex items-center justify-center min-w-[70px]">
+                        <span class="lang-toggle-text">PT-BR</span>
                     </button>
-                </nav>
+                    <nav class="hidden md:flex items-center gap-6 text-xs tracking-[0.22em]">
+                        <a href="index.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_home">Home</a>
+                        <a href="plans.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_plans">Plans</a>
+                        <button id="btn-logout" class="text-gray-400 hover:text-white uppercase transition-colors" data-i18n="nav_logout">
+                            Logout
+                        </button>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -42,13 +48,13 @@
     <main class="pt-28 pb-20">
         <section class="max-w-6xl mx-auto px-6 lg:px-8">
             <header class="mb-10">
-                <p class="text-xs tracking-[0.22em] text-gray-400 uppercase mb-2">
+                <p class="text-xs tracking-[0.22em] text-gray-400 uppercase mb-2" data-i18n="int_pretitle">
                     Exclusive content
                 </p>
-                <h1 class="font-logo text-3xl md:text-4xl mb-3">
+                <h1 class="font-logo text-3xl md:text-4xl mb-3" data-i18n="int_title">
                     Interviews
                 </h1>
-                <p class="text-sm md:text-base text-gray-300 max-w-2xl">
+                <p class="text-sm md:text-base text-gray-300 max-w-2xl" data-i18n="int_desc">
                     Deep dives with skaters from Porto Alegre and around the world. Texts and photos below are placeholders until the real interviews are ready.
                 </p>
             </header>
@@ -58,8 +64,8 @@
                 <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
                     <div class="h-48 bg-[url('https://picsum.photos/600/400?random=21')] bg-cover bg-center"></div>
                     <div class="p-6 flex flex-col gap-3">
-                        <h2 class="font-logo text-lg">Interview – Skater 01</h2>
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400">
+                        <h2 class="font-logo text-lg" data-i18n="int_s1">Interview – Skater 01</h2>
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400" data-i18n="int_street">
                             Street • Porto Alegre
                         </p>
                         <p class="text-sm text-gray-300">
@@ -72,8 +78,8 @@
                 <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
                     <div class="h-48 bg-[url('https://picsum.photos/600/400?random=22')] bg-cover bg-center"></div>
                     <div class="p-6 flex flex-col gap-3">
-                        <h2 class="font-logo text-lg">Interview – Skater 02</h2>
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400">
+                        <h2 class="font-logo text-lg" data-i18n="int_s2">Interview – Skater 02</h2>
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400" data-i18n="int_vert">
                             Vert • Brazil
                         </p>
                         <p class="text-sm text-gray-300">
@@ -86,8 +92,8 @@
                 <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
                     <div class="h-48 bg-[url('https://picsum.photos/600/400?random=23')] bg-cover bg-center"></div>
                     <div class="p-6 flex flex-col gap-3">
-                        <h2 class="font-logo text-lg">Interview – Skater 03</h2>
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400">
+                        <h2 class="font-logo text-lg" data-i18n="int_s3">Interview – Skater 03</h2>
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400" data-i18n="int_diy">
                             DIY • South America
                         </p>
                         <p class="text-sm text-gray-300">
@@ -114,6 +120,8 @@
             window.location.href = 'index.html';
         });
     </script>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
 
