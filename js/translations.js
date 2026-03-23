@@ -11,6 +11,11 @@ const translations = {
         "nav_logout": "Sair",
         "nav_back_home": "Voltar ao início",
 
+        // about.html
+        "about_pretitle": "Descubra Nossas Raízes",
+        "about_title": "SOBRE NÓS",
+        "about_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Nam faucibus porttitor interdum.",
+
         // index.html
         "home_hero_title": "CINCO1",
         "home_hero_subtitle": "A cena do skate de<br>Porto Alegre, Brasil.",
@@ -98,6 +103,11 @@ const translations = {
         "nav_subscribe": "Subscribe",
         "nav_logout": "Logout",
         "nav_back_home": "Back to home",
+
+        // about.html
+        "about_pretitle": "Discover Our Roots",
+        "about_title": "ABOUT US",
+        "about_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Nam faucibus porttitor interdum.",
 
         // index.html
         "home_hero_title": "CINCO1",

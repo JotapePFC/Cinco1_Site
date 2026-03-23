@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinco1 – About Us</title>
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-logo {
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white flex flex-col relative">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between py-5">
+                <a href="index.html" class="font-logo text-xl tracking-wider hover:opacity-80 transition-opacity">
+                    CINCO1
+                </a>
+                <div class="flex items-center gap-4">
+                    <!-- Language Toggle -->
+                    <button class="lang-toggle-btn text-white/90 hover:text-white transition-colors text-xs font-semibold tracking-[0.1em] px-3 py-1.5 border border-white/20 rounded-full flex items-center justify-center min-w-[70px]">
+                        <span class="lang-toggle-text">PT-BR</span>
+                    </button>
+                    <nav class="hidden md:flex items-center gap-6 text-xs tracking-[0.22em]">
+                        <a href="index.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_home">Home</a>
+                        <a href="interviews.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_interviews">Interviews</a>
+                        <a href="exposure.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_exposure">Exposure</a>
+                        <a href="plans.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_plans">Plans</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Background Image -->
+    <div class="fixed inset-0 z-0 bg-[url('images/about_photo.jpg')] bg-center bg-no-repeat opacity-40" style="background-size: 60%;"></div>
+    <div class="fixed inset-0 z-0 bg-gradient-to-t from-black via-black/50 to-black/30"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex items-center justify-center px-4 pt-28 pb-10 relative z-10">
+        <div class="w-full max-w-2xl">
+            <div class="border border-white/20 bg-black/40 backdrop-blur-md rounded-2xl px-10 py-12 text-center shadow-2xl">
+                <p class="text-xs uppercase tracking-[0.22em] text-gray-400 mb-2" data-i18n="about_pretitle">
+                    Discover Our Roots
+                </p>
+                <h1 class="font-logo text-4xl mb-6 text-white" data-i18n="about_title">ABOUT US</h1>
+                <p class="text-sm md:text-base text-gray-200 leading-relaxed max-w-lg mx-auto" data-i18n="about_desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Nam faucibus porttitor interdum.
+                </p>
+                <div class="mt-8">
+                    <a href="index.html" class="inline-flex items-center bg-white text-black px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/90 transition-colors" data-i18n="nav_back_home">
+                        Back to home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>
