@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinco1 – Exposure</title>
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-logo {
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .gallery-modal-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between py-5">
+                <a href="index.html" class="font-logo text-xl tracking-wider hover:opacity-80 transition-opacity">
+                    CINCO1
+                </a>
+                <nav class="hidden md:flex items-center gap-6 text-xs tracking-[0.22em]">
+                    <a href="index.html" class="text-gray-300 hover:text-white uppercase transition-colors">Home</a>
+                    <a href="interviews.html" class="text-gray-300 hover:text-white uppercase transition-colors">Interviews</a>
+                    <a href="plans.html" class="text-gray-300 hover:text-white uppercase transition-colors">Plans</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-28 pb-20">
+        <section class="max-w-6xl mx-auto px-6 lg:px-8">
+            <header class="mb-10">
+                <p class="text-xs tracking-[0.22em] text-gray-400 uppercase mb-2">
+                    Upcoming releases
+                </p>
+                <h1 class="font-logo text-3xl md:text-4xl mb-3">
+                    Exposure
+                </h1>
+                <p class="text-sm md:text-base text-gray-300 max-w-2xl">
+                    A preview of upcoming issues. Covers and descriptions are placeholders while the real material is in production.
+                </p>
+            </header>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Issue 1 -->
+                <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                    <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=31')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between gap-4 mb-3">
+                            <h2 class="font-logo text-lg">Issue 1</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                                Coming soon
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non lorem in turpis viverra volutpat. Integer ut pretium justo.
+                        </p>
+
+                        <div class="mt-5">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-1">
+                                View gallery (15)
+                            </button>
+                            <div id="gallery-issue-1" class="hidden mt-4">
+                                <div class="grid grid-cols-5 gap-2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="1" src="https://picsum.photos/seed/issue1-01/200/200" alt="Issue 1 photo 1">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="2" src="https://picsum.photos/seed/issue1-02/200/200" alt="Issue 1 photo 2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="3" src="https://picsum.photos/seed/issue1-03/200/200" alt="Issue 1 photo 3">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="4" src="https://picsum.photos/seed/issue1-04/200/200" alt="Issue 1 photo 4">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="5" src="https://picsum.photos/seed/issue1-05/200/200" alt="Issue 1 photo 5">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="6" src="https://picsum.photos/seed/issue1-06/200/200" alt="Issue 1 photo 6">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="7" src="https://picsum.photos/seed/issue1-07/200/200" alt="Issue 1 photo 7">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="8" src="https://picsum.photos/seed/issue1-08/200/200" alt="Issue 1 photo 8">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="9" src="https://picsum.photos/seed/issue1-09/200/200" alt="Issue 1 photo 9">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="10" src="https://picsum.photos/seed/issue1-10/200/200" alt="Issue 1 photo 10">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="11" src="https://picsum.photos/seed/issue1-11/200/200" alt="Issue 1 photo 11">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="12" src="https://picsum.photos/seed/issue1-12/200/200" alt="Issue 1 photo 12">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="13" src="https://picsum.photos/seed/issue1-13/200/200" alt="Issue 1 photo 13">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="14" src="https://picsum.photos/seed/issue1-14/200/200" alt="Issue 1 photo 14">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-1" data-index="15" src="https://picsum.photos/seed/issue1-15/200/200" alt="Issue 1 photo 15">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Issue 2 -->
+                <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                    <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=32')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between gap-4 mb-3">
+                            <h2 class="font-logo text-lg">Issue 2</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                                Coming soon
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ante et odio pellentesque vehicula.
+                        </p>
+
+                        <div class="mt-5">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-2">
+                                View gallery (15)
+                            </button>
+                            <div id="gallery-issue-2" class="hidden mt-4">
+                                <div class="grid grid-cols-5 gap-2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="1" src="https://picsum.photos/seed/issue2-01/200/200" alt="Issue 2 photo 1">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="2" src="https://picsum.photos/seed/issue2-02/200/200" alt="Issue 2 photo 2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="3" src="https://picsum.photos/seed/issue2-03/200/200" alt="Issue 2 photo 3">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="4" src="https://picsum.photos/seed/issue2-04/200/200" alt="Issue 2 photo 4">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="5" src="https://picsum.photos/seed/issue2-05/200/200" alt="Issue 2 photo 5">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="6" src="https://picsum.photos/seed/issue2-06/200/200" alt="Issue 2 photo 6">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="7" src="https://picsum.photos/seed/issue2-07/200/200" alt="Issue 2 photo 7">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="8" src="https://picsum.photos/seed/issue2-08/200/200" alt="Issue 2 photo 8">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="9" src="https://picsum.photos/seed/issue2-09/200/200" alt="Issue 2 photo 9">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="10" src="https://picsum.photos/seed/issue2-10/200/200" alt="Issue 2 photo 10">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="11" src="https://picsum.photos/seed/issue2-11/200/200" alt="Issue 2 photo 11">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="12" src="https://picsum.photos/seed/issue2-12/200/200" alt="Issue 2 photo 12">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="13" src="https://picsum.photos/seed/issue2-13/200/200" alt="Issue 2 photo 13">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="14" src="https://picsum.photos/seed/issue2-14/200/200" alt="Issue 2 photo 14">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-2" data-index="15" src="https://picsum.photos/seed/issue2-15/200/200" alt="Issue 2 photo 15">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Issue 3 -->
+                <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                    <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=33')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between gap-4 mb-3">
+                            <h2 class="font-logo text-lg">Issue 3</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                                Coming soon
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget turpis non est convallis porta. Sed euismod, nisi at.
+                        </p>
+
+                        <div class="mt-5">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-3">
+                                View gallery (15)
+                            </button>
+                            <div id="gallery-issue-3" class="hidden mt-4">
+                                <div class="grid grid-cols-5 gap-2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="1" src="https://picsum.photos/seed/issue3-01/200/200" alt="Issue 3 photo 1">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="2" src="https://picsum.photos/seed/issue3-02/200/200" alt="Issue 3 photo 2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="3" src="https://picsum.photos/seed/issue3-03/200/200" alt="Issue 3 photo 3">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="4" src="https://picsum.photos/seed/issue3-04/200/200" alt="Issue 3 photo 4">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="5" src="https://picsum.photos/seed/issue3-05/200/200" alt="Issue 3 photo 5">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="6" src="https://picsum.photos/seed/issue3-06/200/200" alt="Issue 3 photo 6">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="7" src="https://picsum.photos/seed/issue3-07/200/200" alt="Issue 3 photo 7">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="8" src="https://picsum.photos/seed/issue3-08/200/200" alt="Issue 3 photo 8">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="9" src="https://picsum.photos/seed/issue3-09/200/200" alt="Issue 3 photo 9">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="10" src="https://picsum.photos/seed/issue3-10/200/200" alt="Issue 3 photo 10">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="11" src="https://picsum.photos/seed/issue3-11/200/200" alt="Issue 3 photo 11">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="12" src="https://picsum.photos/seed/issue3-12/200/200" alt="Issue 3 photo 12">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="13" src="https://picsum.photos/seed/issue3-13/200/200" alt="Issue 3 photo 13">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="14" src="https://picsum.photos/seed/issue3-14/200/200" alt="Issue 3 photo 14">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-3" data-index="15" src="https://picsum.photos/seed/issue3-15/200/200" alt="Issue 3 photo 15">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Issue 4 -->
+                <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                    <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=34')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between gap-4 mb-3">
+                            <h2 class="font-logo text-lg">Issue 4</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                                Coming soon
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper, justo at finibus interdum, lacus nulla.
+                        </p>
+
+                        <div class="mt-5">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-4">
+                                View gallery (15)
+                            </button>
+                            <div id="gallery-issue-4" class="hidden mt-4">
+                                <div class="grid grid-cols-5 gap-2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="1" src="https://picsum.photos/seed/issue4-01/200/200" alt="Issue 4 photo 1">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="2" src="https://picsum.photos/seed/issue4-02/200/200" alt="Issue 4 photo 2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="3" src="https://picsum.photos/seed/issue4-03/200/200" alt="Issue 4 photo 3">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="4" src="https://picsum.photos/seed/issue4-04/200/200" alt="Issue 4 photo 4">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="5" src="https://picsum.photos/seed/issue4-05/200/200" alt="Issue 4 photo 5">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="6" src="https://picsum.photos/seed/issue4-06/200/200" alt="Issue 4 photo 6">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="7" src="https://picsum.photos/seed/issue4-07/200/200" alt="Issue 4 photo 7">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="8" src="https://picsum.photos/seed/issue4-08/200/200" alt="Issue 4 photo 8">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="9" src="https://picsum.photos/seed/issue4-09/200/200" alt="Issue 4 photo 9">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="10" src="https://picsum.photos/seed/issue4-10/200/200" alt="Issue 4 photo 10">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="11" src="https://picsum.photos/seed/issue4-11/200/200" alt="Issue 4 photo 11">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="12" src="https://picsum.photos/seed/issue4-12/200/200" alt="Issue 4 photo 12">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="13" src="https://picsum.photos/seed/issue4-13/200/200" alt="Issue 4 photo 13">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="14" src="https://picsum.photos/seed/issue4-14/200/200" alt="Issue 4 photo 14">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-4" data-index="15" src="https://picsum.photos/seed/issue4-15/200/200" alt="Issue 4 photo 15">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Issue 5 -->
+                <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                    <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=35')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between gap-4 mb-3">
+                            <h2 class="font-logo text-lg">Issue 5</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                                Coming soon
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus.
+                        </p>
+
+                        <div class="mt-5">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-5">
+                                View gallery (15)
+                            </button>
+                            <div id="gallery-issue-5" class="hidden mt-4">
+                                <div class="grid grid-cols-5 gap-2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="1" src="https://picsum.photos/seed/issue5-01/200/200" alt="Issue 5 photo 1">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="2" src="https://picsum.photos/seed/issue5-02/200/200" alt="Issue 5 photo 2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="3" src="https://picsum.photos/seed/issue5-03/200/200" alt="Issue 5 photo 3">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="4" src="https://picsum.photos/seed/issue5-04/200/200" alt="Issue 5 photo 4">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="5" src="https://picsum.photos/seed/issue5-05/200/200" alt="Issue 5 photo 5">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="6" src="https://picsum.photos/seed/issue5-06/200/200" alt="Issue 5 photo 6">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="7" src="https://picsum.photos/seed/issue5-07/200/200" alt="Issue 5 photo 7">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="8" src="https://picsum.photos/seed/issue5-08/200/200" alt="Issue 5 photo 8">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="9" src="https://picsum.photos/seed/issue5-09/200/200" alt="Issue 5 photo 9">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="10" src="https://picsum.photos/seed/issue5-10/200/200" alt="Issue 5 photo 10">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="11" src="https://picsum.photos/seed/issue5-11/200/200" alt="Issue 5 photo 11">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="12" src="https://picsum.photos/seed/issue5-12/200/200" alt="Issue 5 photo 12">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="13" src="https://picsum.photos/seed/issue5-13/200/200" alt="Issue 5 photo 13">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="14" src="https://picsum.photos/seed/issue5-14/200/200" alt="Issue 5 photo 14">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-5" data-index="15" src="https://picsum.photos/seed/issue5-15/200/200" alt="Issue 5 photo 15">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Issue 6 -->
+                <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                    <div class="aspect-[4/5] bg-[url('https://picsum.photos/700/900?random=36')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between gap-4 mb-3">
+                            <h2 class="font-logo text-lg">Issue 6</h2>
+                            <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+                                Coming soon
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Nulla facilisi. Etiam a nibh vel.
+                        </p>
+
+                        <div class="mt-5">
+                            <button class="gallery-toggle inline-flex items-center text-xs tracking-[0.22em] uppercase text-white/80 hover:text-white transition-colors" data-target="gallery-issue-6">
+                                View gallery (15)
+                            </button>
+                            <div id="gallery-issue-6" class="hidden mt-4">
+                                <div class="grid grid-cols-5 gap-2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="1" src="https://picsum.photos/seed/issue6-01/200/200" alt="Issue 6 photo 1">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="2" src="https://picsum.photos/seed/issue6-02/200/200" alt="Issue 6 photo 2">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="3" src="https://picsum.photos/seed/issue6-03/200/200" alt="Issue 6 photo 3">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="4" src="https://picsum.photos/seed/issue6-04/200/200" alt="Issue 6 photo 4">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="5" src="https://picsum.photos/seed/issue6-05/200/200" alt="Issue 6 photo 5">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="6" src="https://picsum.photos/seed/issue6-06/200/200" alt="Issue 6 photo 6">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="7" src="https://picsum.photos/seed/issue6-07/200/200" alt="Issue 6 photo 7">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="8" src="https://picsum.photos/seed/issue6-08/200/200" alt="Issue 6 photo 8">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="9" src="https://picsum.photos/seed/issue6-09/200/200" alt="Issue 6 photo 9">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="10" src="https://picsum.photos/seed/issue6-10/200/200" alt="Issue 6 photo 10">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="11" src="https://picsum.photos/seed/issue6-11/200/200" alt="Issue 6 photo 11">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="12" src="https://picsum.photos/seed/issue6-12/200/200" alt="Issue 6 photo 12">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="13" src="https://picsum.photos/seed/issue6-13/200/200" alt="Issue 6 photo 13">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="14" src="https://picsum.photos/seed/issue6-14/200/200" alt="Issue 6 photo 14">
+                                    <img class="gallery-img w-full aspect-square object-cover rounded-lg cursor-pointer" data-gallery="issue-6" data-index="15" src="https://picsum.photos/seed/issue6-15/200/200" alt="Issue 6 photo 15">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="gallery-modal" class="hidden fixed inset-0 z-[60] bg-black/90">
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="w-full max-w-4xl">
+                <div class="flex items-center justify-between mb-3">
+                    <p id="gallery-modal-title" class="text-xs tracking-[0.22em] uppercase text-gray-300"></p>
+                    <button id="gallery-modal-close" class="text-white/80 hover:text-white transition-colors text-xs tracking-[0.22em] uppercase">
+                        Close
+                    </button>
+                </div>
+
+                <div class="relative">
+                    <img id="gallery-modal-img" src="" alt="" class="w-full max-h-[75vh] object-contain rounded-xl border border-white/10 bg-black" />
+
+                    <button id="gallery-modal-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/15 border border-white/10 rounded-full px-4 py-2 text-xs tracking-[0.22em] uppercase">
+                        Prev
+                    </button>
+                    <button id="gallery-modal-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/15 border border-white/10 rounded-full px-4 py-2 text-xs tracking-[0.22em] uppercase">
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const galleries = {};
+
+        function seedToLargeUrl(seed) {
+            return `https://picsum.photos/seed/${seed}/1400/900`;
+        }
+
+        // Build map galleryKey -> [seed...]
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            const key = img.dataset.gallery;
+            if (!galleries[key]) galleries[key] = [];
+            const seed = img.getAttribute('src').match(/seed\/([^/]+)\//)?.[1];
+            if (seed) galleries[key].push(seed);
+        });
+
+        // Toggle gallery visibility
+        document.querySelectorAll('.gallery-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.dataset.target;
+                const el = document.getElementById(targetId);
+                if (!el) return;
+                el.classList.toggle('hidden');
+            });
+        });
+
+        // Modal logic
+        const modal = document.getElementById('gallery-modal');
+        const modalImg = document.getElementById('gallery-modal-img');
+        const modalTitle = document.getElementById('gallery-modal-title');
+        const closeBtn = document.getElementById('gallery-modal-close');
+        const prevBtn = document.getElementById('gallery-modal-prev');
+        const nextBtn = document.getElementById('gallery-modal-next');
+
+        let currentGallery = null;
+        let currentIndex = 0;
+
+        function openModal(galleryKey, index) {
+            currentGallery = galleryKey;
+            currentIndex = index;
+            const seeds = galleries[currentGallery] || [];
+            const seed = seeds[currentIndex];
+            if (!seed) return;
+
+            modalTitle.textContent = `${currentGallery.toUpperCase().replace('-', ' ')} • ${currentIndex + 1}/15`;
+            modalImg.src = seedToLargeUrl(seed);
+            modalImg.alt = `${currentGallery} photo ${currentIndex + 1}`;
+
+            modal.classList.remove('hidden');
+            document.documentElement.classList.add('gallery-modal-open');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modalImg.src = '';
+            document.documentElement.classList.remove('gallery-modal-open');
+        }
+
+        function step(delta) {
+            const seeds = galleries[currentGallery] || [];
+            if (!seeds.length) return;
+            currentIndex = (currentIndex + delta + seeds.length) % seeds.length;
+            openModal(currentGallery, currentIndex);
+        }
+
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            img.addEventListener('click', () => {
+                const key = img.dataset.gallery;
+                const index = Math.max(0, (parseInt(img.dataset.index || '1', 10) - 1));
+                openModal(key, index);
+            });
+        });
+
+        closeBtn?.addEventListener('click', closeModal);
+        prevBtn?.addEventListener('click', () => step(-1));
+        nextBtn?.addEventListener('click', () => step(1));
+
+        modal?.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowLeft') step(-1);
+            if (e.key === 'ArrowRight') step(1);
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinco1 – Login</title>
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-logo {
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white flex flex-col">
+    <!-- Header simples -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between py-5">
+                <a href="index.html" class="font-logo text-xl tracking-wider hover:opacity-80 transition-opacity">
+                    CINCO1
+                </a>
+                <a href="plans.html" class="text-xs tracking-[0.22em] text-gray-300 hover:text-white uppercase transition-colors">
+                    Subscribe
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="flex-1 flex items-center justify-center px-4 pt-24 pb-10">
+        <div class="w-full max-w-md">
+            <div class="border border-white/10 bg-white/5 backdrop-blur-sm rounded-2xl px-8 py-10">
+                <h1 class="font-logo text-2xl mb-2 text-center">Sign in</h1>
+                <p class="text-sm text-gray-300 text-center mb-8">
+                    Access your Cinco1 account to manage your subscription.
+                </p>
+
+                <form id="login-form" class="space-y-5">
+                    <div class="space-y-2">
+                        <label for="email" class="block text-xs uppercase tracking-[0.22em] text-gray-400">
+                            E-mail
+                        </label>
+                        <input
+                            id="email"
+                            type="email"
+                            required
+                            class="w-full rounded-full bg-black border border-white/20 px-4 py-3 text-sm outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
+                            placeholder="you@example.com"
+                        />
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="password" class="block text-xs uppercase tracking-[0.22em] text-gray-400">
+                            Password
+                        </label>
+                        <input
+                            id="password"
+                            type="password"
+                            required
+                            class="w-full rounded-full bg-black border border-white/20 px-4 py-3 text-sm outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
+                            placeholder="••••••••"
+                        />
+                    </div>
+
+                    <div class="flex items-center justify-between text-xs text-gray-400">
+                        <label class="inline-flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="rounded border-white/30 bg-black text-white focus:ring-white/60" />
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="hover:text-white transition-colors">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full inline-flex justify-center items-center bg-white text-black px-6 py-3 rounded-full text-xs font-semibold tracking-[0.22em] uppercase hover:bg-white/90 transition-colors mt-4"
+                    >
+                        Login
+                    </button>
+                </form>
+
+                <p class="mt-6 text-center text-xs text-gray-400">
+                    New here?
+                    <a href="plans.html" class="text-white hover:underline">
+                        Subscribe to Cinco1
+                    </a>
+                </p>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        // Login fake apenas para proteger áreas como interviews.html
+        document.getElementById('login-form')?.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const email = (document.getElementById('email') || {}).value || '';
+            const password = (document.getElementById('password') || {}).value || '';
+
+            // Apenas exemplo; aqui você chamaria sua API real
+            if (!email || !password) {
+                alert('Please fill in e-mail and password.');
+                return;
+            }
+
+            // Marca usuário como "logado" no navegador
+            localStorage.setItem('cinco1_logged_in', 'true');
+
+            // Redireciona para interviews se vier com ?redirect=interviews
+            const params = new URLSearchParams(window.location.search);
+            const redirect = params.get('redirect');
+
+            if (redirect === 'interviews') {
+                window.location.href = 'interviews.html';
+            } else {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinco1 – Interviews</title>
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-logo {
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between py-5">
+                <a href="index.html" class="font-logo text-xl tracking-wider hover:opacity-80 transition-opacity">
+                    CINCO1
+                </a>
+                <nav class="hidden md:flex items-center gap-6 text-xs tracking-[0.22em]">
+                    <a href="index.html" class="text-gray-300 hover:text-white uppercase transition-colors">Home</a>
+                    <a href="plans.html" class="text-gray-300 hover:text-white uppercase transition-colors">Plans</a>
+                    <button id="btn-logout" class="text-gray-400 hover:text-white uppercase transition-colors">
+                        Logout
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo -->
+    <main class="pt-28 pb-20">
+        <section class="max-w-6xl mx-auto px-6 lg:px-8">
+            <header class="mb-10">
+                <p class="text-xs tracking-[0.22em] text-gray-400 uppercase mb-2">
+                    Exclusive content
+                </p>
+                <h1 class="font-logo text-3xl md:text-4xl mb-3">
+                    Interviews
+                </h1>
+                <p class="text-sm md:text-base text-gray-300 max-w-2xl">
+                    Deep dives with skaters from Porto Alegre and around the world. Texts and photos below are placeholders until the real interviews are ready.
+                </p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                    <div class="h-48 bg-[url('https://picsum.photos/600/400?random=21')] bg-cover bg-center"></div>
+                    <div class="p-6 flex flex-col gap-3">
+                        <h2 class="font-logo text-lg">Interview – Skater 01</h2>
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400">
+                            Street • Porto Alegre
+                        </p>
+                        <p class="text-sm text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, orci vitae gravida hendrerit, ipsum justo lacinia velit, nec cursus massa enim in enim. Integer ac massa eget justo blandit posuere.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                    <div class="h-48 bg-[url('https://picsum.photos/600/400?random=22')] bg-cover bg-center"></div>
+                    <div class="p-6 flex flex-col gap-3">
+                        <h2 class="font-logo text-lg">Interview – Skater 02</h2>
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400">
+                            Vert • Brazil
+                        </p>
+                        <p class="text-sm text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at condimentum nibh. Phasellus mauris augue, finibus non lorem vel, aliquam rhoncus lacus. Nam et luctus urna, vitae lobortis enim.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                    <div class="h-48 bg-[url('https://picsum.photos/600/400?random=23')] bg-cover bg-center"></div>
+                    <div class="p-6 flex flex-col gap-3">
+                        <h2 class="font-logo text-lg">Interview – Skater 03</h2>
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400">
+                            DIY • South America
+                        </p>
+                        <p class="text-sm text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel tempus magna, non volutpat mi. Nulla facilisi. Suspendisse at tortor non neque mollis malesuada.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Proteção simples via localStorage
+        (function guardRoute() {
+            const loggedIn = localStorage.getItem('cinco1_logged_in') === 'true';
+            if (!loggedIn) {
+                // Envia de volta para login com redirect
+                window.location.href = 'login.html?redirect=interviews';
+            }
+        })();
+
+        document.getElementById('btn-logout')?.addEventListener('click', () => {
+            localStorage.removeItem('cinco1_logged_in');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
+
