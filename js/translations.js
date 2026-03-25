@@ -91,6 +91,15 @@ const translations = {
         "plans_feature_2a": "• Acesso prioritário a novos projetos",
         "plans_feature_3a": "• Economize comparado ao mensal",
         "plans_pix_price_ann": "Preço PIX: ",
+
+        // interview-detail.html
+        "int_detail_title": "Skater 01 Interview",
+        "int_detail_date": "15 Jan, 2026",
+        "int_detail_intro": "Vitus Silas é um nome que você já deve ter ouvido por aí. Originalmente da Jutlândia, a parte da Dinamarca mais próxima da Alemanha, Vitus se aventurou há alguns anos para frequentar a escola dos seus sonhos em Malmö, na Suécia. Você pode ter visto o nome dele no vídeo \"Dispatch\" ou \"Virgin Mojito\", e agora ele está andando junto com o esquadrão Nike SB no próximo vídeo.",
+        "int_detail_p1": "Sua jornada no skate começou bem cedo, aos quatro ou cinco anos de idade, quando seu pai lhe deu um shape de Natal, o qual ele admite não ter ligado muito na época. \"Acho que no Natal, quando eu era bem novo, ganhei um skate, mas nunca me interessei tanto. Pegava de vez em quando, e quando tinha uns oito anos fiquei realmente empolgado e andava pela garagem.\"",
+        "int_detail_p2": "\"Meu pai também ficou muito empolgado que eu gostei. Ele fazia questão de me levar de carro para a pista de skate, sendo que a mais próxima ficava a 30 ou 40 minutos de distância. Eu fui muito abençoado por ter um pai que também se entusiasmava muito com a minha paixão. Ele também andava um pouco de skate quando era mais novo, mas diria que ele é mais do snowboard.\"",
+        "int_detail_p3": "O apoio dos pais sempre ajuda muito quando se é tão jovem, especialmente crescendo longe dos grandes centros do skate. Mais tarde em sua trajetória no skate, Vitus entrou para o circuito de competições, inclusive participando das classificatórias olímpicas. Essas disputas foram nossa primeira introdução a ele e ao seu skate, e mesmo naquela época, como um jovem competidor, era fácil notar que havia algo especial na sua maneira de andar.",
+        "int_detail_p4": "Embora agora ele tenha saído das Olimpíadas e não esteja mais em busca de medalhas, ele ainda se lembra de todo o circuito como uma boa experiência. \"Meu pai me levava de carro pela Europa, ou às vezes até voávamos para ir a esses campeonatos amadores. Era muito divertido ir e encontrar os amigos que você não consegue ver com tanta frequência e andar de skate no evento.\""
     },
     en: {
         // Navigation / Globals
@@ -184,5 +193,14 @@ const translations = {
         "plans_feature_2a": "• Priority access to new projects",
         "plans_feature_3a": "• Save compared to paying monthly",
         "plans_pix_price_ann": "PIX price: ",
+
+        // interview-detail.html
+        "int_detail_title": "Skater 01 Interview",
+        "int_detail_date": "Jan 15, 2026",
+        "int_detail_intro": "Vitus Silas is a name that by now you may have picked up on. Originally from Jutland, the part of Denmark closest to Germany, Vitus wandered off a few years ago to attend his dream school, Bryggeriet Gymnasium in Malmö, Sweden. You may have seen his name pop up in Emerica's \"Dispatch\" video, or Volcom's \"Virgin Mojito\" video, but after splitting ways with both of those sponsors he's now skating alongside the Nike SB squad in Tor Ström's upcoming video.",
+        "int_detail_p1": "His skateboard journey started as young as four or five years old, when his dad gifted him a board for Christmas, which he admits he didn't care for at the time. \"I think for Christmas, when I was really young, maybe four, I got a board, but I never really got into it that much. I picked it up once in a while, then by the time I was eight I got really stoked on it and was riding around in the garage.\"",
+        "int_detail_p2": "\"My dad was also really stoked that I liked it. He was really keen to drive me to the skate park, with the nearest one a 30 or 40 minute drive. I was really blessed to have a dad that was also really hyped on my passion. He was also a little bit into skating when he was younger but I'd say he's more of a snowboarder.\"",
+        "int_detail_p3": "The parental support always helps a lot when you're that young, especially growing up far away from the hubs of skateboarding. Further on in his skate trajectory Vitus got into skating contests, even being on the Olympic team at the age of fourteen. These contests were our first introduction to him and his skating, and even back then, as a young contest kid, it was easy to tell there was something special about his skating.",
+        "int_detail_p4": "While by now he's dropped out of the Olympics and is no longer hunting medals, he still remembers the whole contest circuit as a good experience. \"My dad would drive me around Europe, or maybe we would even fly to go to these amateur contests, where all of those guys I met from the other contest were also attending. It was really fun to go and meet all your homies that you don't get to see as often.\""
     }
 };
