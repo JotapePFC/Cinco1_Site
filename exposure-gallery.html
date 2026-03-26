@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinco1 – Exposure Gallery</title>
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-logo {
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between py-5">
+                <a href="index.html" class="font-logo text-xl tracking-wider hover:opacity-80 transition-opacity">
+                    CINCO1
+                </a>
+                <div class="flex items-center gap-4">
+                    <!-- Language Toggle -->
+                    <button class="lang-toggle-btn text-white/90 hover:text-white transition-colors text-xs font-semibold tracking-[0.1em] px-3 py-1.5 border border-white/20 rounded-full flex items-center justify-center min-w-[70px]">
+                        <span class="lang-toggle-text">PT-BR</span>
+                    </button>
+                    <nav class="hidden md:flex items-center gap-6 text-xs tracking-[0.22em]">
+                        <a href="index.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_home">Home</a>
+                        <a href="interviews.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_interviews">Interviews</a>
+                        <a href="exposure.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_exposure">Exposure</a>
+                        <a href="plans.html" class="text-gray-300 hover:text-white uppercase transition-colors" data-i18n="nav_plans">Plans</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-28 pb-20">
+        <section class="max-w-5xl mx-auto px-6 lg:px-8 flex flex-col items-center">
+
+            <!-- Back link -->
+            <div class="w-full flex items-center mb-6">
+                <a href="exposure.html" class="inline-flex items-center text-xs tracking-[0.22em] text-gray-400 hover:text-white uppercase transition-colors">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="mr-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Back to Exposure
+                </a>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="relative w-full aspect-[16/9] md:aspect-[21/9] bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
+                <!-- Loader -->
+                <div id="loader" class="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300">
+                    <div class="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
+                </div>
+
+                <img id="carousel-img" src="" class="w-full h-full object-cover transition-opacity duration-500 opacity-0 cursor-zoom-in hover:opacity-90" alt="Gallery Image" title="Clique para ampliar">
+
+                <button id="btn-prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full backdrop-blur transition-all">
+                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <button id="btn-next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full backdrop-blur transition-all">
+                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </button>
+
+                <div class="absolute bottom-4 left-0 w-full flex justify-center pointer-events-none">
+                    <span id="carousel-counter" class="bg-black/60 backdrop-blur px-4 py-1.5 rounded-full text-xs tracking-widest uppercase border border-white/10 shadow-lg pointer-events-auto">1 / 10</span>
+                </div>
+            </div>
+
+            <!-- Carousel Caption -->
+            <div class="w-full text-center mt-4">
+                <p id="carousel-caption" class="text-xs md:text-sm font-logo tracking-[0.1em] text-gray-400"></p>
+            </div>
+
+            <!-- Issue Description -->
+            <div class="mt-10 w-full max-w-2xl text-center">
+                <span class="text-[10px] tracking-[0.22em] uppercase text-gray-400 border border-white/10 px-3 py-1 rounded-full mb-4 inline-block" data-i18n="exp_coming">
+                    Coming soon
+                </span>
+                <h1 id="issue-title" class="font-logo text-3xl md:text-4xl mb-4">Carregando...</h1>
+                <p id="issue-desc" class="text-sm md:text-base text-gray-300 leading-relaxed"></p>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Fullscreen Modal -->
+    <div id="fullscreen-modal" class="hidden fixed inset-0 z-[60] bg-black/95 flex flex-col items-center justify-center p-4">
+        <button id="modal-close" class="absolute top-6 right-6 text-white/80 hover:text-white p-2 transition-colors">
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+
+        <button id="modal-prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-4 rounded-full backdrop-blur transition-all">
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+
+        <div class="flex flex-col items-center justify-center w-full max-w-full max-h-[85vh] h-full gap-4">
+            <img id="modal-img" src="" class="max-w-full min-h-0 object-contain transition-opacity duration-300" style="max-height: calc(100% - 3rem);" alt="Fullscreen Image">
+            <p id="modal-caption" class="text-xs md:text-sm font-logo tracking-[0.1em] text-gray-400 text-center flex-shrink-0"></p>
+        </div>
+
+        <button id="modal-next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-4 rounded-full backdrop-blur transition-all">
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </button>
+
+        <div class="absolute bottom-6 left-0 w-full flex justify-center pointer-events-none">
+            <span id="modal-counter" class="bg-black/60 backdrop-blur px-4 py-1.5 rounded-full text-xs tracking-widest uppercase border border-white/10 text-gray-300 pointer-events-auto"></span>
+        </div>
+    </div>
+
+    <script>
+        const issuesData = {
+            "1": {
+                titleKey: "exp_issue1",
+                titleDef: "Issue 1",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non lorem in turpis viverra volutpat. Integer ut pretium justo."
+            },
+            "2": {
+                titleKey: "exp_issue2",
+                titleDef: "Issue 2",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ante et odio pellentesque vehicula."
+            },
+            "3": {
+                titleKey: "exp_issue3",
+                titleDef: "Issue 3",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget turpis non est convallis porta. Sed euismod, nisi at."
+            },
+            "4": {
+                titleKey: "exp_issue4",
+                titleDef: "Issue 4",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper, justo at finibus interdum, lacus nulla."
+            },
+            "5": {
+                titleKey: "exp_issue5",
+                titleDef: "Issue 5",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus."
+            },
+            "6": {
+                titleKey: "exp_issue6",
+                titleDef: "Issue 6",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Nulla facilisi. Etiam a nibh vel."
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const issueId = params.get('issue') || "1";
+        const data = issuesData[issueId] || issuesData["1"];
+
+        const titleEl = document.getElementById('issue-title');
+        titleEl.setAttribute('data-i18n', data.titleKey);
+        titleEl.textContent = data.titleDef;
+        document.getElementById('issue-desc').textContent = data.desc;
+
+        // Carousel setup
+        const totalImages = 10;
+        let currentIndex = 0;
+
+        const imgEl        = document.getElementById('carousel-img');
+        const counterEl    = document.getElementById('carousel-counter');
+        const loaderEl     = document.getElementById('loader');
+        const captionEl    = document.getElementById('carousel-caption');
+        const modalEl      = document.getElementById('fullscreen-modal');
+        const modalImgEl   = document.getElementById('modal-img');
+        const modalCountEl = document.getElementById('modal-counter');
+        const modalCapEl   = document.getElementById('modal-caption');
+
+        let isModalOpen = false;
+
+        // Placeholder captions – replace with real data when available
+        const dummyTricks = ["Ollie", "Kickflip", "Heelflip", "Tre Flip", "Noseslide", "Tailslide", "Crooked Grind", "Smith Grind", "Feeble Grind", "BS Boardslide"];
+        function getCaption(index) {
+            return `Skatista ${String(index + 1).padStart(2, '0')} | ${dummyTricks[index % dummyTricks.length]}`;
+        }
+
+        function getImageUrl(index) {
+            return `https://picsum.photos/seed/issueGALLERY${issueId}-${index}/1200/600`;
+        }
+
+        function updateCarousel() {
+            imgEl.style.opacity = '0';
+            loaderEl.style.opacity = '1';
+
+            const srcUrl = getImageUrl(currentIndex);
+
+            setTimeout(() => {
+                imgEl.src = srcUrl;
+                counterEl.textContent = `${currentIndex + 1} / ${totalImages}`;
+                captionEl.textContent = getCaption(currentIndex);
+            }, 250);
+
+            if (isModalOpen) {
+                modalImgEl.style.opacity = '0';
+                setTimeout(() => {
+                    modalImgEl.src = srcUrl;
+                    modalCountEl.textContent = `${currentIndex + 1} / ${totalImages}`;
+                    modalCapEl.textContent = getCaption(currentIndex);
+                    modalImgEl.onload = () => { modalImgEl.style.opacity = '1'; };
+                }, 150);
+            }
+        }
+
+        imgEl.onload = () => {
+            imgEl.style.opacity = '1';
+            loaderEl.style.opacity = '0';
+        };
+
+        function nextImage() {
+            currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
+            updateCarousel();
+        }
+
+        document.getElementById('btn-prev').addEventListener('click', prevImage);
+        document.getElementById('btn-next').addEventListener('click', nextImage);
+        document.getElementById('modal-prev').addEventListener('click', prevImage);
+        document.getElementById('modal-next').addEventListener('click', nextImage);
+
+        // Open fullscreen modal on image click
+        imgEl.addEventListener('click', () => {
+            isModalOpen = true;
+            modalEl.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            modalImgEl.src = getImageUrl(currentIndex);
+            modalImgEl.style.opacity = '1';
+            modalCountEl.textContent = `${currentIndex + 1} / ${totalImages}`;
+            modalCapEl.textContent = getCaption(currentIndex);
+        });
+
+        function closeModal() {
+            isModalOpen = false;
+            modalEl.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        modalEl.addEventListener('click', (e) => {
+            if (e.target === modalEl) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft')  { prevImage(); }
+            else if (e.key === 'ArrowRight') { nextImage(); }
+            else if (e.key === 'Escape') {
+                if (isModalOpen) { closeModal(); }
+                else { window.location.href = 'exposure.html'; }
+            }
+        });
+
+        updateCarousel();
+    </script>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>
